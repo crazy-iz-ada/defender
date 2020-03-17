@@ -1,0 +1,455 @@
+* {
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    text-rendering: optimizeLegibility;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#videobcg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 110%;
+    min-height: 110%;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    overflow: hidden;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+#videobcg.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#videobcg.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#typing {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+
+#typing.visible-dark {
+    background-color: rgba(0,0,0,0.6);
+}
+
+#typing.hidden-dark {
+    background-color: rgba(0,0,0,0.35);
+}
+
+#typing-text {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.buttons-block {
+    width: 60%;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+head {
+    display: none;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    background: linear-gradient(312deg, #2d132c, #3282b8, #b030b0, #341677);
+    background-size: 600% 600%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    -webkit-animation: BgAnim 32s ease infinite;
+    -moz-animation: BgAnim 32s ease infinite;
+    -o-animation: BgAnim 32s ease infinite;
+    -ms-animation: BgAnim 32s ease infinite;
+    animation: BgAnim 32s ease infinite;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    cursor: default;
+}
+
+p {
+    margin: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ff5858;
+}
+
+a {
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+a.typewrite {
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff5858;
+}
+
+.wrap {
+    border-right: 0.05em solid #fff;
+    animation: blinking 1.5s steps(1) infinite;
+}
+
+.avatar {
+    display: inline-block;
+    margin: 0px;
+    background-image: url(assets/avatar.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 8px solid #ff5858;
+    border-radius: 100%;
+}
+
+button {
+    margin: 8px 4px;
+    padding: 18px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 16px;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    outline: none;
+
+}
+
+button:hover {
+    background-color: #ff5858;
+    border: 3px solid #ff5858;
+    outline: none;
+}
+
+@-webkit-keyframes BgAnim {
+    0% {
+        background-position:2% 0%;
+    }
+    50% {
+        background-position:99% 100%;
+    }
+    100% {
+        background-position:2% 0%;
+    }
+}
+
+@-moz-keyframes BgAnim {
+    0% {
+        background-position:2% 0%;
+    }
+    50% {
+        background-position:99% 100%;
+    }
+    100% {
+        background-position:2% 0%;
+    }
+}
+
+@-o-keyframes BgAnim {
+    0% {
+        background-position:2% 0%;
+    }
+    50% {
+        background-position:99% 100%;
+    }
+    100% {
+        background-position:2% 0%;
+    }
+}
+
+@-ms-keyframes BgAnim {
+    0% {
+        background-position:2% 0%;
+    }
+    50% {
+        background-position:99% 100%;
+    }
+    100% {
+        background-position:2% 0%;
+    }
+}
+
+@keyframes BgAnim {
+    0% {
+        background-position:2% 0%;
+    }
+    50% {
+        background-position:99% 100%;
+    }
+    100% {
+        background-position:2% 0%;
+    }
+}
+
+@-webkit-keyframes blinking {
+    0%  {
+        color: #fff;
+    }
+    50% {
+        color: transparent;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+@-moz-keyframes blinking {
+    0%  {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+@-o-keyframes blinking {
+    0%  {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+@-ms-keyframes blinking {
+    0%  {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+@keyframes blinking {
+    0%  {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+/*
+    Rules for tablets and PC's in landscape
+*/
+@media (min-width: 840px) and (orientation: landscape) {
+    h1 {
+        margin-top: 8px;
+        margin-bottom: 32px;
+        font-size: 48px;
+    }
+
+    .avatar {
+        width: 192px;
+        height: 192px;
+    }
+}
+
+/*
+    Rules for tablets and PC's in portrait
+*/
+@media (min-height: 860px) and (orientation: portrait) {
+    h1 {
+        margin-top: 8px;
+        margin-bottom: 32px;
+        font-size: 48px;
+    }
+
+    .avatar {
+        border: 6px solid #ff5858;
+        width: 192px;
+        height: 192px;
+    }
+}
+
+/*
+    Rules for regular phones in portait mode
+*/
+@media (max-height: 850px) and (orientation: portrait) {
+    h1 {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        font-size: 36px;
+    }
+
+    #typing {
+        padding: 12px;
+    }
+
+
+    .buttons-block {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    .avatar {
+        border: 6px solid #ff5858;
+        width: 128px;
+        height: 128px;
+    }
+}
+
+/*
+    Rules for regular phones landscape
+*/
+@media (max-width: 830px) and (orientation: landscape) {
+    h1 {
+        margin-top: 8px;
+        margin-bottom: 12px;
+        font-size: 36px;
+    }
+
+    .buttons-block {
+        width: 70%;
+        margin-top: 12px;
+    }
+
+    .avatar {
+        display: none;
+    }
+}
+
+/*
+    Special rule for portrait and landscape modes for small phones (e.g. iPhone 5S/SE and others)
+*/
+@media (max-width: 360px) and (orientation: portrait) {
+    h1 {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        font-size: 28px;
+    }
+
+    p {
+        font-weight: 400;
+    }
+
+    #typing {
+        padding: 12px;
+    }
+
+    button {
+        margin: 8px 2px;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid white;
+        border-radius: 12px;
+
+    }
+
+    .buttons-block {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+
+    .avatar {
+        border: 6px solid #ff5858;
+        width: 144px;
+        height: 144px;
+    }
+}
+
+@media (max-height: 320px) and (orientation: landscape) {
+    h1 {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 28px;
+    }
+
+    #typing {
+        padding: 12px;
+    }
+
+    button {
+        margin: 8px 2px;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid white;
+        border-radius: 12px;
+
+    }
+
+    .buttons-block {
+        width: 80%;
+        margin-top: 8px;
+    }
+
+    .avatar {
+        display: none;
+    }
+}
